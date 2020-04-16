@@ -37,6 +37,10 @@ td {
   font-size:35px;
 }
 
+.selected {
+background-color:red;
+}
+
 .circle {
   display: block;
   background: black;

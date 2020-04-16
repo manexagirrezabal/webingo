@@ -24,6 +24,16 @@ function embed_lottery_image () {
   return '<img src="loteria.jpg" width="60" height="60"/>';
 }
 
+function changeColor(element) {
+ if (element.className == "selected") {
+ element.setAttribute("class", "");
+}
+else {
+ element.setAttribute("class", "selected");
+}
+}
+
+
 function generate_table() {
   var table = document.getElementById("bingotaula");
   table.innerHTML = "";
@@ -49,9 +59,11 @@ function generate_table() {
 //         if (emptycells.includes(idx)) {
          if (emptycells[rowidx].includes(colidx)) {
 	   cell.innerHTML = embed_lottery_image();
+	   
 	 }
 	 else {
            cell.innerHTML = allnumbers[colidx][rowidx];
+	   cell.setAttribute('onclick',"changeColor(this)");
          }
          row.append(cell);
     }
