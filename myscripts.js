@@ -111,6 +111,10 @@ function generate_number() {
 
   var ateratakoak = document.getElementById("ateratakoak");
 
-  ateratakoak.innerHTML = ateratakoak.innerHTML + " " + zenbakia.toString();
+    //Bertsio sinplea
+//    ateratakoak.innerHTML = ateratakoak.innerHTML + " " + zenbakia.toString();
+
+    //Bertsio cool-a
+    ateratakoak.innerHTML = " <label class=\"ball\">" + zenbakia.toString() + "</label>" + ateratakoak.innerHTML;
   
 }
